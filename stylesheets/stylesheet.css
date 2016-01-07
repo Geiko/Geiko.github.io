@@ -310,7 +310,8 @@ Full-Width Styles
 }
 
 #project_tagline {
-  color: #fff;
+  /*color: #fff;*/
+  color: #75715E;
   /*font-size: 24px;*/
   font-weight: 300;
   background: none;
