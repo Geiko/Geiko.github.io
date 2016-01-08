@@ -10,7 +10,7 @@ var margin = {
 
     var y = d3.scale.ordinal().domain(d3.range(1)).rangePoints([0, height]);
 
-    var svg = d3.select("#header_wrap")
+    var svg = d3.select("#pulse")
       .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
