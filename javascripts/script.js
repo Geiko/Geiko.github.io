@@ -1,52 +1,43 @@
-(function($) {
-$(document).ready(function(){
 
-  // putting lines by the pre blocks
-  $("pre").each(function(){
-    var pre = $(this).text().split("\n");
-    var lines = new Array(pre.length+1);
-    for(var i = 0; i < pre.length; i++) {
-      var wrap = Math.floor(pre[i].split("").length / 70)
-      if (pre[i]==""&&i==pre.length-1) {
-        lines.splice(i, 1);
-      } else {
-        lines[i] = i+1;
-        for(var j = 0; j < wrap; j++) {
-          lines[i] += "\n";
-        }
-      }
+
+var margin = {
+      top: 40,
+      right: 40,
+      bottom: 40,
+      left: 40
+    }, width = 50 - margin.left - margin.right,
+      height = 50 - margin.top - margin.bottom;
+
+    var y = d3.scale.ordinal().domain(d3.range(1)).rangePoints([0, height]);
+
+    var svg = d3.select("#header_wrap")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    svg.selectAll("circle")
+      .data(y.domain())
+      .enter()
+      .append("circle")
+      .attr("stroke-width", 0)
+      .attr("r", 0)
+      .attr("cx", width / 2)
+      .attr("cy", y)
+      .each(pulse);
+
+    function pulse() {
+      var circle = svg.select("circle");
+      (function repeat() {
+        circle = circle.transition()
+          .duration(12)
+          .attr("stroke-width", 2)
+          .attr("r", 0)
+          .transition()
+          .duration(700)
+          .attr('stroke-width', 0)
+          .attr("r", 25)
+          .ease('sine')
+          .each("end", repeat);
+      })();
     }
-    $(this).before("<pre class='lines'>" + lines.join("\n") + "</pre>");
-  });
 
-  var headings = [];
-
-  var collectHeaders = function(){
-    headings.push({"top":$(this).offset().top - 15,"text":$(this).text()});
-  }
-
-  if($(".markdown-body h1").length > 1) $(".markdown-body h1").each(collectHeaders)
-  else if($(".markdown-body h2").length > 1) $(".markdown-body h2").each(collectHeaders)
-  else if($(".markdown-body h3").length > 1) $(".markdown-body h3").each(collectHeaders)
-
-  $(window).scroll(function(){
-    if(headings.length==0) return true;
-    var scrolltop = $(window).scrollTop() || 0;
-    if(headings[0] && scrolltop < headings[0].top) {
-      $(".current-section").css({"opacity":0,"visibility":"hidden"});
-      return false;
-    }
-    $(".current-section").css({"opacity":1,"visibility":"visible"});
-    for(var i in headings) {
-      if(scrolltop >= headings[i].top) {
-        $(".current-section .name").text(headings[i].text);
-      }
-    }
-  });
-
-  $(".current-section a").click(function(){
-    $(window).scrollTop(0);
-    return false;
-  })
-});
-})(jQuery)

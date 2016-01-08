@@ -258,6 +258,7 @@ form {
   padding: 20px;
 }
 
+    
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
@@ -316,6 +317,7 @@ Full-Width Styles
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
+  /*text-align: right;*/
 }
 
 #downloads {
@@ -371,6 +373,16 @@ Full-Width Styles
   background: #212121;
 }
 
+    svg {
+      /*background-color: #3b3b3c;*/
+      background-color: #252525;
+    }
+    circle {
+      fill: none;
+      /*fill: #252525;*/
+      /*stroke: #398FBD;*/
+      stroke: orange;
+    }
 
 
 /*******************************************************************************
