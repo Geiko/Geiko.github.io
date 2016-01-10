@@ -377,13 +377,23 @@ Full-Width Styles
       /*background-color: #3b3b3c;*/
       background-color: #252525;
     }
-    circle {
+    ellipse {
       fill: none;
       /*fill: #252525;*/
       /*stroke: #398FBD;*/
       stroke: orange;
     }
-
+    
+    #pulse:hover:before{
+     content: " e-mail ";
+     width: 120px;
+     height: 30px;
+     color: #F8A000;
+     font-style: italic;
+     font-weight: normal;
+        text-align: center;
+        position: absolute;
+    }
 
 /*******************************************************************************
 Small Device Styles

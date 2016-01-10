@@ -15,27 +15,30 @@ var margin = {
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    svg.selectAll("circle")
+    svg.selectAll("ellipse")
       .data(y.domain())
       .enter()
-      .append("circle")
-      .attr("stroke-width", 0)
-      .attr("r", 0)
+      .append("ellipse")
+      .attr("stroke-width", 2)
+      .attr("rx", 0)
+      .attr("ry", 0)
       .attr("cx", width / 2)
       .attr("cy", y)
       .each(pulse);
 
     function pulse() {
-      var circle = svg.select("circle");
+      var ellipse = svg.select("ellipse");
       (function repeat() {
-        circle = circle.transition()
+        ellipse = ellipse.transition()
           .duration(12)
           .attr("stroke-width", 2)
-          .attr("r", 0)
+          .attr("rx", 0)
+          .attr("ry", 0)
           .transition()
           .duration(700)
           .attr('stroke-width', 0)
-          .attr("r", 25)
+          .attr("rx", 25)
+          .attr("ry", 25)
           .ease('sine')
           .each("end", repeat);
       })();
