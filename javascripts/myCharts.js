@@ -13,7 +13,7 @@ var svg = d3.select('.chart')
 				.attr('width', width)
 				// .style('border', '1px solid orange');
 
-// функция интерполяции значений на ось Х 
+// interpolate data on the X axis
 var scaleX = d3.scale.linear()
 				.domain([0, 100])
 				.range([0, xAxisLength])
@@ -22,39 +22,39 @@ var scaleX = d3.scale.linear()
 	// 			.domain([new Date(2015, 0, 1), new Date()])
 	// 			.range([0, xAxisLength]);
 
-// функция интерполяции значений на ось Y
+// interpolate data on the Y axis
 var scaleY = d3.scale.linear()
 				.domain([100,0])
 				.range([0, yAxisLength]);
 
-// создаем ось X 
+// create X axis
 var xAxis = d3.svg.axis()
 				.scale(scaleX)
 				.orient('bottom');
 				// .ticks(6);
 				// .tickFormat(d3.time.format('%b %d,%Y'));
 
-// создаем ось Y
+// create Y axis
 var yAxis = d3.svg.axis()
 				.scale(scaleY)
 				.orient('left')
 				.ticks(5);
 
-// отрисовка оси Х
+// draw Х axis
 svg.append('g')
 				.attr('class', 'x-axis')
 				.attr('transform', 
 					'translate('+margin+','+(height - margin)+')')
 				.call(xAxis);
 
-// отрисовка оси Y
+// draw Y axis
 svg.append('g')
 				.attr('class', 'y-axis')
 				.attr('transform',
 					'translate('+margin+','+margin+')')
 				.call(yAxis);
 
-// создаем набор вертикальных линий для сетки   
+// draw vertical grid lines   
 d3.selectAll('g.x-axis g.tick')
 				.append('line')
 				.classed('grid-line', true)
@@ -63,7 +63,7 @@ d3.selectAll('g.x-axis g.tick')
 				.attr('x2', 0)
 				.attr('y2', - (yAxisLength));
 
-// рисуем горизонтальные линии координатной сетки
+// draw horizontal grid lines
 d3.selectAll('g.y-axis g.tick')
 				.append('line')
 				.classed('grid-line', true)
@@ -99,7 +99,7 @@ d3.selectAll('g.y-axis g.tick')
 	    .text("Х");
 
 
-// функция, создающая по массиву точек линии//////////////
+// create line
 var line = d3.svg.line()
 				// .x(function(d){return d.x;})
 				.x(function(d,i){return scaleX(i)+margin;})
@@ -122,7 +122,7 @@ var data,
 	data = d3.range(dotQuantity+1).map(function(){return Math.random()*100});
     // console.log(data);
 
-	// добавляем путь
+	// add path
 	path = svg.append('g').append("path")
 		      .attr("d", line(data))
 		      .style("stroke", "yellow")
@@ -141,6 +141,5 @@ var data,
         .duration(7000)
         .ease("linear")
         .attr("stroke-dashoffset", 0)
-        	// .remove()
           	.each("end", repeat);
 })();

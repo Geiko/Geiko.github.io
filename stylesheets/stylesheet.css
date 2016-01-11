@@ -375,7 +375,7 @@ Full-Width Styles
 
     svg {
       /*background-color: #3b3b3c;*/
-      background-color: #252525;
+      background-color: #212121;
     }
     ellipse {
       fill: none;
@@ -398,7 +398,17 @@ Full-Width Styles
     .chart{
       /*margin-top: 50px;*/
       /*border: 1px solid red;*/
-      text-align:center;
+      text-align:center;      
+      display:inline-block;
+    }
+
+    .rotation{      
+      display:inline-block;
+      margin: 0 100px;
+    }
+    .show{
+      margin: auto;
+      /*border: 1px solid red;*/
     }
 
     /*svg{*/
