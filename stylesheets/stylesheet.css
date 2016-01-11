@@ -299,7 +299,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 30px 10px 0px 10px;
 }
 
 #project_title {
@@ -374,13 +374,10 @@ Full-Width Styles
 }
 
     svg {
-      /*background-color: #3b3b3c;*/
       background-color: #212121;
     }
     ellipse {
       fill: none;
-      /*fill: #252525;*/
-      /*stroke: #398FBD;*/
       stroke: orange;
     }
     
@@ -402,7 +399,7 @@ Full-Width Styles
     }
 
     .rotation{  
-      width: 20%;    
+      width: 25%;    
       float: left;
       text-align: center;
       /*border: 1px solid yellow;*/

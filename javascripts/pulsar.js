@@ -1,10 +1,10 @@
 
 
 var margin = {
-      top: 40,
-      right: 40,
-      bottom: 40,
-      left: 40
+      top: 0,
+      right: 10,
+      bottom: 10,
+      left: 10
     }, width = 50 - margin.left - margin.right,
       height = 50 - margin.top - margin.bottom;
 
