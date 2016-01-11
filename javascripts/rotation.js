@@ -19,7 +19,7 @@ var w = 100, h = 100;
 var n = d3.select(".rotation").insert("svg")
   .attr("width", w)
   .attr("height", h)
-  .style("fill", 'green')
+  .style("fill", '#33FF00')
   .insert("g")
   .attr("transform","translate(" + w/2 + "," + w/2 + ")");
 n.insert("circle")
