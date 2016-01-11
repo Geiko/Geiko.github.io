@@ -395,23 +395,29 @@ Full-Width Styles
         position: absolute;
     }
 
-    .chart{
-      /*margin-top: 50px;*/
+    .show{
+      width: 100%;
+      margin: 0 auto;
       /*border: 1px solid red;*/
-      text-align:center;      
-      /*display:inline-block;*/
     }
 
-    .rotation{      
-      /*display:inline-block;*/
-      text-align:center;      
-      /*margin: 0 100px;*/
+    .rotation{  
+      width: 20%;    
+      float: left;
+      text-align: center;
+      /*border: 1px solid yellow;*/
     }
-    
-/*    .show{
-      margin: auto;*/
-      /*border: 1px solid red;*/
-    /*}*/
+
+    .chart{
+      width: 50%; 
+      text-align:center;      
+      margin: 0 auto;
+      /*border: 1px solid green;*/
+    }
+
+    .git{
+      text-align: center;
+    }
 
     /*svg{*/
     /*  display: block;

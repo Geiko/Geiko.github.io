@@ -1,5 +1,5 @@
 var height = 100,
-    width = 700,
+    width = 650,
     margin = 30,
     dotQuantity = 100;
 
