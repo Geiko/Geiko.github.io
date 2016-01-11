@@ -399,17 +399,19 @@ Full-Width Styles
       /*margin-top: 50px;*/
       /*border: 1px solid red;*/
       text-align:center;      
-      display:inline-block;
+      /*display:inline-block;*/
     }
 
     .rotation{      
-      display:inline-block;
-      margin: 0 100px;
+      /*display:inline-block;*/
+      text-align:center;      
+      /*margin: 0 100px;*/
     }
-    .show{
-      margin: auto;
+    
+/*    .show{
+      margin: auto;*/
       /*border: 1px solid red;*/
-    }
+    /*}*/
 
     /*svg{*/
     /*  display: block;
