@@ -385,7 +385,7 @@ Full-Width Styles
     }
     
     #pulse:hover:before{
-     content: " e-mail ";
+     content: " E-mail ";
      width: 120px;
      height: 30px;
      color: #F8A000;
