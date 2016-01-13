@@ -405,6 +405,18 @@ Full-Width Styles
       /*border: 1px solid yellow;*/
     }
 
+    /*.rotation:hover:before{
+     content: " What's up? ";*/
+     /*width: 120px;*/
+     /*height: 30px;*/
+     /*color: #33FF00;*/
+     /*font-style: italic;*/
+/*     font-weight: normal;
+     font-size: 9px;
+        text-align: center;
+        position: absolute;
+    }*/
+
     .chart{
       width: 50%; 
       text-align:center;      

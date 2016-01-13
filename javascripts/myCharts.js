@@ -139,7 +139,7 @@ var data,
       .attr("stroke-dashoffset", totalLength)
       .transition()
         .duration(7000)
-        .ease("linear")
+        .ease("elastic")
         .attr("stroke-dashoffset", 0)
           	.each("end", repeat);
 })();
