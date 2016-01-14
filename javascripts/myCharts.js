@@ -138,7 +138,7 @@ var data,
       .attr("stroke-dasharray", totalLength + " " + totalLength)
       .attr("stroke-dashoffset", totalLength)
       .transition()
-        .duration(7000)
+        .duration(7000) 
         .ease("elastic")
         .attr("stroke-dashoffset", 0)
           	.each("end", repeat);

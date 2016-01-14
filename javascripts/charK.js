@@ -16,7 +16,7 @@ var KContainer = d3.select('.charK')
 				.append('svg')
 				.attr('height', +picture.height)
 				.attr('width', +picture.width)
-				.style('background', '#212121');
+				.style('background', '#212121')
 				// .style('border', '1px solid orange');
 
 var trace = d3.svg.line()
@@ -55,7 +55,7 @@ d3.json("./data/coordinates1.json", function(error, json) {
 
   data.forEach(function(d) {
 
-    d.x = +d.x / 700 * +picture.height;
+    d.x = +d.x / 700 * +picture.height - 50;
     d.y = +d.y / 700 * +picture.height;
 
   });
@@ -107,12 +107,19 @@ function visualize(data){
 
   var	totalLength = traceGroup.node().getTotalLength();
 
-  KContainer
+
+  (function repeat() {
+
+    KContainer
         .selectAll('path')
         .attr("stroke-dasharray", totalLength + " " + totalLength)
         .attr("stroke-dashoffset", totalLength)
         .transition()
-          .duration(+picture.duration)
-          .ease("linear")
-          .attr("stroke-dashoffset", 0);
+            .duration(+picture.duration)
+            .delay(1000) 
+            .ease("linear")
+            .attr("stroke-dashoffset", 0)
+                .each("end", repeat);
+  })();
+
 };

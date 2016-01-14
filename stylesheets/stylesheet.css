@@ -299,7 +299,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 30px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
 }
 
 #project_title {
@@ -376,22 +376,34 @@ Full-Width Styles
 /*    svg {
       background-color: #212121;
     }*/
-    
+
     ellipse {
       fill: none;
       stroke: orange;
     }
     
     #pulse:hover:before{
-     content: " E-mail ";
-     width: 120px;
-     height: 30px;
-     color: #F8A000;
-     font-style: italic;
-     font-weight: normal;
+       content: " E-mail ";
+       width: 120px;
+       height: 30px;
+       color: #F8A000;
+       font-style: italic;
+       font-weight: normal;
         text-align: center;
         position: absolute;
     }
+/*
+    .charK:hover:before{
+       content: " E-mail ";
+       width: 100px;
+       height: 0px;
+       color: #8F2F34;
+       font-style: italic;
+       font-weight: normal;
+       font-size: 32px;
+        text-align: center;
+        position: absolute;
+    }*/
 
     .show{
       width: 100%;
