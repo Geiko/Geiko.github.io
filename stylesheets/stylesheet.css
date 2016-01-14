@@ -373,9 +373,10 @@ Full-Width Styles
   background: #212121;
 }
 
-    svg {
+/*    svg {
       background-color: #212121;
-    }
+    }*/
+    
     ellipse {
       fill: none;
       stroke: orange;

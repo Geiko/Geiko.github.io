@@ -6,7 +6,7 @@ var height = 100,
 xAxisLength = width - 2 * margin;
 yAxisLength = height - 2 * margin;
 
-var svg = d3.select('.chart')
+var chartsSvg = d3.select('.chart')
 				.append('svg')
 				.attr('class', 'axis')
 				.attr('height', height)
@@ -41,14 +41,14 @@ var yAxis = d3.svg.axis()
 				.ticks(5);
 
 // draw Х axis
-svg.append('g')
+chartsSvg.append('g')
 				.attr('class', 'x-axis')
 				.attr('transform', 
 					'translate('+margin+','+(height - margin)+')')
 				.call(xAxis);
 
 // draw Y axis
-svg.append('g')
+chartsSvg.append('g')
 				.attr('class', 'y-axis')
 				.attr('transform',
 					'translate('+margin+','+margin+')')
@@ -80,7 +80,7 @@ d3.selectAll('g.y-axis g.tick')
 	//     .style("font-size", "22px")
 	//     .text("Live Chart");
 	 
-	svg.select('g.y-axis')
+	chartsSvg.select('g.y-axis')
 		.append("text")
 	    .attr("x", 0)
 	    .attr("y", - 11)
@@ -89,7 +89,7 @@ d3.selectAll('g.y-axis g.tick')
 	    .style("fill", "red")
 	    .text("Y");
  
-	svg.select('g.x-axis')
+	chartsSvg.select('g.x-axis')
 		.append("text")
 	    .attr("x", xAxisLength + 11)
 	    .attr("y", 0)
@@ -116,14 +116,14 @@ var data,
 
 	counter++;
 	if(counter%2 === 0){
-		d3.selectAll("path").remove();
+		chartsSvg.selectAll("path").remove();
 	};
 
 	data = d3.range(dotQuantity+1).map(function(){return Math.random()*100});
     // console.log(data);
 
 	// add path
-	path = svg.append('g').append("path")
+	path = chartsSvg.append('g').append("path")
 		      .attr("d", line(data))
 		      .style("stroke", "yellow")
 		      .style("stroke-width", "2");
