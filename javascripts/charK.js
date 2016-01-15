@@ -11,7 +11,7 @@ var picture = {
 var feather = {
 
     width: 10,
-    thickness: 0.8,      // min = 0.1
+    thickness: 1,      // min = 0.1
     angle: 33           // degree
 
   };
@@ -24,8 +24,8 @@ d3.json ( "./data/coordinates1.json", function ( error, json ) {
 
   var data = scaleData ( json );
   var KContainer = createSvg ();
-  var traceGroup = createLines ( KContainer, data );
-  visualize ( KContainer, traceGroup );
+  createLines ( KContainer, data );
+  visualize ( KContainer );
   // showDots ( KContainer, data );
 
 });
@@ -70,13 +70,13 @@ function scaleData ( json ) {
 function createSvg () {
 
   var KContainer = d3.select('.charK')
-        .append('svg')
-        .attr('height', +picture.height + 2 * feather.width) // set to css
-        .attr('width', +picture.width + 2 * feather.width)
-        .attr('class', 'pictureSvg')
-        // .style('background', '#212121')
-        .style('opacity', '0.9')
-        // .style('border', '1px solid red');
+          .append('svg')
+          .attr('height', +picture.height + 2 * feather.width)
+          .attr('width', +picture.width + 2 * feather.width)
+          // .attr('class', 'pictureSvg')
+          // .style('background', '#212121')
+          .style('opacity', 1)
+          // .style('border', '1px solid red');
 
   return KContainer;
 }
@@ -85,10 +85,10 @@ function createSvg () {
 
 function createLines ( KContainer, data ) {
 
+  var traceQuantity = Math.round( +feather.width / +feather.thickness) + 1;
+
   var xOffset = +feather.width * Math.cos ( +feather.angle * Math.PI /180 );
   var yOffset = +feather.width * Math.sin ( +feather.angle * Math.PI /-180 );
-
-  var traceQuantity = (Math.round( +feather.width / +feather.thickness) + 1) * 2;
 
   var trace = d3.svg.line()
         .x(function(d){return d.x;})
@@ -106,23 +106,27 @@ function createLines ( KContainer, data ) {
       };      
     }
 
-  var traceGroup = KContainer.append('g')
+  var traceGroup = KContainer
+            .append('g')
             .append('path')
-            .attr("d", trace(tempData))
+            .attr("d", trace(tempData))   // binding data to lines
             .attr('fill', 'none')
             .style("stroke", "#8F2F34")
             .style("stroke-linecap", "round")
             .style("stroke-width", +feather.thickness);
   }
-
-  return traceGroup;
 }
 
 
 
-function visualize ( KContainer, traceGroup ) {
+function visualize ( KContainer ) {
 
-  var totalLength = traceGroup.node().getTotalLength();
+  var totalLength = KContainer
+            .select('g')
+            .selectAll('path')
+            .node()
+            .getTotalLength();
+
 
   (function repeat() {
 
@@ -135,10 +139,22 @@ function visualize ( KContainer, traceGroup ) {
             // .delay(5000) 
             .ease("linear")
             .attr("stroke-dashoffset", 0)
+        .transition()
+            .duration(+picture.duration/3)
+            .ease("linear")
+            .style("stroke", "black")
+        .transition()
+            .duration(+picture.duration/4)
+            .style("stroke", "#212121")
+        .transition()
+            .duration(+picture.duration/5)
+            .style("stroke", "#212121")
+        .transition()
+            .duration(0)
+            .style("stroke", "#8F2F34")
                 .each("end", repeat);
-
   })();
-
+  
 };
 
 
@@ -146,12 +162,12 @@ function visualize ( KContainer, traceGroup ) {
 function showDots ( KContainer , data ) {
 
   KContainer.selectAll('circle')
-         .data(data)
-         .enter()
-         .append('circle') 
-               .attr('cx', function(d){return d.x})
-               .attr('cy', function(d){return d.y})
-               .attr('r', 2)
-               .style('fill', 'red');
+      .data(data)
+      .enter()
+      .append('circle') 
+            .attr('cx', function(d){return d.x})
+            .attr('cy', function(d){return d.y})
+            .attr('r', 2)
+            .style('fill', 'red');
 
 }
