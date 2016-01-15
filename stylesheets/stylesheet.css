@@ -430,6 +430,13 @@ Full-Width Styles
         position: absolute;
     }*/
 
+    .charK{
+      width: 50%; 
+      text-align:center;      
+      margin: 0 auto;
+      /*border: 1px solid green;*/
+    }
+
     .chart{
       width: 50%; 
       text-align:center;      
@@ -475,6 +482,10 @@ Full-Width Styles
         fill: #717171;
     }
 
+    .pictureSvg {
+        /*background: red;*/
+        /*opacity: 1;*/
+    }
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
