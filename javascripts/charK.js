@@ -21,18 +21,13 @@ var feather = {
 d3.json ( "./data/coordinates1.json", function ( error, json ) {
 
   if ( error ) return console.warn ( error );  
-
   var data = scaleData ( json );
   var KContainer = createSvg ();
   createLines ( KContainer, data );
-  visualize ( KContainer );
+  animate ( KContainer );
   // showDots ( KContainer, data );
 
 });
-
-
-
-
 
 
 
@@ -119,7 +114,7 @@ function createLines ( KContainer, data ) {
 
 
 
-function visualize ( KContainer ) {
+function animate ( KContainer ) {
 
   var totalLength = KContainer
             .select('g')
@@ -136,7 +131,6 @@ function visualize ( KContainer ) {
         .attr("stroke-dashoffset", totalLength)
         .transition()
             .duration(+picture.duration)
-            // .delay(5000) 
             .ease("linear")
             .attr("stroke-dashoffset", 0)
         .transition()
@@ -144,20 +138,18 @@ function visualize ( KContainer ) {
             .style("stroke", "#8F2F34")
         .transition()
             .duration(+picture.duration/2)
-            .ease("linear")
             .style("stroke", "black")
         .transition()
             .duration(1200)
             .style("stroke", "#212121")
         .transition()
             .duration(2000)
-            .style("stroke", "#212121")
         .transition()
             .duration(0)
             .style("stroke", "#8F2F34")
                 .each("end", repeat);
   })();
-  
+
 };
 
 
