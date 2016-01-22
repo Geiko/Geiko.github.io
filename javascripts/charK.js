@@ -122,7 +122,6 @@ function animate ( KContainer ) {
             .node()
             .getTotalLength();
 
-
   (function repeat() {
 
     KContainer
