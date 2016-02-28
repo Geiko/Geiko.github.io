@@ -92,23 +92,24 @@ function createLines ( KContainer, data ) {
 
   for(j=0; j<traceQuantity; j++){
 
-    var tempData = [];
+      var tempData = [];
 
-    for(i=0; i<data.length; i++){
-      tempData[i] = { 
-        x:+data[i].x + j * xOffset / traceQuantity, 
-        y:+data[i].y + j * yOffset / traceQuantity 
-      };      
-    }
+      for(i=0; i<data.length; i++){
+        tempData[i] = { 
+          x:+data[i].x + j * xOffset / traceQuantity, 
+          y:+data[i].y + j * yOffset / traceQuantity 
+        };      
+      }
 
-  var traceGroup = KContainer
-            .append('g')
-            .append('path')
-            .attr("d", trace(tempData))   // binding data to lines
-            .attr('fill', 'none')
-            .style("stroke", "#8F2F34")
-            .style("stroke-linecap", "round")
-            .style("stroke-width", +feather.thickness);
+    var traceGroup = KContainer
+              .append('g')
+              .append('path')
+              .attr("d", trace(tempData))   // binding data to lines
+              .attr('fill', 'none')
+              .style("stroke", "#8F2F34")
+              .style("stroke-linecap", "round")
+              .style("stroke-width", +feather.thickness);
+    console.log(data);
   }
 }
 
