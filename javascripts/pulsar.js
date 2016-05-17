@@ -5,8 +5,9 @@ var margin = {
       right: 10,
       bottom: 10,
       left: 10
-    }, width = 50 - margin.left - margin.right,
-      height = 50 - margin.top - margin.bottom;
+    }, 
+    width = 70 - margin.left - margin.right,
+    height = 70 - margin.top - margin.bottom;
 
     var y = d3.scale.ordinal().domain(d3.range(1)).rangePoints([0, height]);
 
