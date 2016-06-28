@@ -1,7 +1,7 @@
 		;$(function(){
 			window.onscroll = function(){
 
- 				if (document.body.scrollTop > 0) {
+ 				if (document.body.scrollTop > 70) {
 
  					$('#pulse').removeClass('pulseDown');
 
