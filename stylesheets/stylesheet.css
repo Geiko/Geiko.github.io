@@ -270,7 +270,10 @@ Full-Width Styles
 .mybody, .myfooter{
   position: relative; 
   z-index: 1;
-  top: 250px;
+  top: 200px;*/
+}
+.pulseDown{
+  margin-top:70px;
 }
 
 
@@ -281,7 +284,7 @@ Full-Width Styles
 .inner {
   position: relative;
   max-width: 640px;
-  padding: 20px 10px;
+  /*padding: 20px 10px;*/
   margin: 0 auto;
 }
 

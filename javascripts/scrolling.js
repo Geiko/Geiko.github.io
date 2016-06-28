@@ -3,6 +3,8 @@
 
  				if (document.body.scrollTop > 0) {
 
+ 					$('#pulse').removeClass('pulseDown');
+
 					$('.cv').html(
 							'<h5 id="project_title" class="animate1">Kostiantyn Geiko &nbsp&nbsp&nbsp Junior .NET/JS Developer</h5>'+
 
@@ -18,6 +20,8 @@
 					);
 				}
 				else {
+
+ 					$('#pulse').addClass('pulseDown');
 
 					$('.cv').html(
 
