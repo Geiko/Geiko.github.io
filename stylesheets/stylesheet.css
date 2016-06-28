@@ -262,9 +262,20 @@ form {
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
+.myheader{
+  padding: 10px 0 0 0;
+  position: fixed; 
+  z-index: 2;
+}
+.mybody, .myfooter{
+  position: relative; 
+  z-index: 1;
+  top: 250px;
+}
+
 
 .outer {
-  width: 100%;
+  width: 100%; 
 }
 
 .inner {
@@ -299,13 +310,13 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 0px 10px 0px 10px;
+  /*padding: 0px 10px 0px 10px;*/
 }
 
 #project_title {
   margin: 0;
   color: #33FF00;
-  font-size: 42px;
+  font-size: 36px;*/
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
@@ -383,7 +394,7 @@ Full-Width Styles
     }
     
     #pulse:hover:before{
-       content: " E-mail ";
+       content: " Hello! ";
        width: 120px;
        height: 30px;
        color: #F8A000;
