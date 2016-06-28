@@ -8,8 +8,6 @@ $('.magic1').hover(
 );
 
 
-//$('.animate1').addClass('animated flip');
-
 $('.animate1').hover(
 	function () {
   		$(this).addClass('animated rubberBand');
