@@ -28,7 +28,7 @@ n.insert("circle")
   .attr("cy", 0)
 n.insert("text")
   .style('font-size', '9px')
-  .text("blab-blab");
+  .text("blah-blah");
 
 function f(rot) {
   n.select("text").call(textrotate("rotate("+rot+")translate(5,0)"));
