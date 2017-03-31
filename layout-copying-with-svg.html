@@ -1,25 +1,157 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
+<!-- 
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Geiko.GitHub.io : site&#39;s test ">
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dummy-bezier-svg-d3-generator</title>
+    <meta name="keywords" content="crossplotting, overlay, transparencies, pen, feather, calligraphy, writing, penmanship, letter, character, symbol, animate, drawsvg, app, online, draw, vector, svg, code, editor, drawing, logo, tools, document, line, bezier, path, pattern, layout, dummy, json, d3, bunch, curve, generate, convert, transform, дралоскоп, Безье, макет, кривая, рисовать, вектор, редактор, писать, каллиграфия, буква, символ, чертежное, перо, анимация" />
+    <meta name="description" content="Convert a dummy to svg or JSON and d3.js using Bezier curves. The free online SVG drawing application for designers and developers. Creating calligraphy letters. Free tool dummy to SVG image Converter. Переведи макет в svg или JSON и d3.js с помощью кривых Безье." />
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script type="application/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 
-   <!--  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> -->
-   <!--  <link rel="stylesheet" href="stylesheets/animate.min.css"> -->
-
-    <title>Geiko.GitHub.io</title>
+    <link href="CopyScope/css/copyScopeCss.css" rel="stylesheet" type="text/css" />
+    <link href="CopyScope/js/color-picker-master/color-picker.min.css" rel="stylesheet" />
 </head>
-
 <body>
-    layout-copying-with-svg
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8
+                        col-md-10
+                        col-sm-12
+                        col-xs-12">
+
+                <div class="manageMenu">
+                    <div class="adjustPlate">
+                        <input type='button' id='adjustPlateButton' class="btn btn-default btn-sm" value="Sheet" />
+                    </div>
+                    <div class="adjustDots">
+                        <input type='button' id='adjustDotsButton' class="btn btn-default btn-sm" value="Dots" />
+                    </div>
+                    <div class="adjustLine">
+                        <input type='button' id='adjustLineButton' class="btn btn-default btn-sm" value="Curve" />
+                    </div>
+                    <div class="lang">
+                        <select id="language">
+                            <option value="0" selected>English</option>
+                            <option value="1">Russian</option>
+                            <option value="2">Ukrainian</option>
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <!-- ============================================================================ -->
+                <div class="svg-container" id="clock">
+
+                    <svg version="1.1" viewBox="0 0 500 500"
+                         preserveAspectRatio="xMinYMin meet" class="svg-content">
+                    </svg>
+
+                    <!-- ============================== -->
+                    <div class='menuStyle'>
+                        <label id='getvalLabel' for='getval' class='btn btn-default btn-xs setBackground'>Upload Dummy</label>
+                        <input type='file' id='getval' />
+                        @*<button id='deleteImg' type='button' class='btn btn-default btn-xs'>Delete Dummy</button>*@
+                        <div class='setSvgOpacityDiv'>
+                            <span class="opacityMenu">Opacity:</span>
+                            <input id='setSvgOpacity' name='opacity' type='number' min='0' max='1' step='0.01'>
+                        </div>
+                        <input id='colorPickerButton' value='Color' type='button' class='btn btn-default btn-xs colorPic'>
+                    </div>
+                    <!-- ============================== -->
+                    <div class='menuDotStyle'>
+                        <div class='setDotsRadiusDiv'>
+                            <span class="dotsRadiusMenu">Radius:</span>
+                            <input id='setDotsRadius' type='number' min='0' max='100' step='1'>
+                        </div>
+                        <div class='setDotsOpacityDiv'>
+                            <span class="opacityMenu">Opacity:</span>
+                            <input id='setDotsOpacity' type='number' min='0' max='1' step='0.01'>
+                        </div>
+                        <input id='dotsColorPickerButton' value='Color' type='button' class='btn btn-default btn-xs colorPic'>
+                    </div>
+                    <!-- ============================== -->
+                    <div class='menuCurveStyle'>
+                        <div class='setCurveMaxWidthDiv'>
+                            <span class="curveMaxWidthMenu">Max <span class="curveWidthMenu">Width:</span></span>
+                            <input id='setCurveMaxWidth' type='number' min='0' max='500' step='1'>
+                        </div>
+                        <div class='setCurveMinWidthDiv'>
+                            <span class="curveMinWidthMenu">Min <span class="curveWidthMenu">Width:</span></span>
+                            <input id='setCurveMinWidth' type='number' min='0.1' max='500' step='0.1'>
+                        </div>
+                        <div class='setCurvAngleDiv'>
+                            <span class="curveAnglehMenu">Feather Angle,<br /> degree:</span>
+                            <input id='setCurveAngle' type='number' min='-360' max='360' step='1'>
+                        </div>
+                        <div class='setCurveOpacityDiv'>
+                            <span class="opacityMenu">Opacity:</span>
+                            <input id='setCurveOpacity' type='number' min='0' max='1' step='0.01'>
+                        </div>
+                        <input id='curveColorPickerButton' value='Color' type='button' class='btn btn-default btn-xs colorPic'>
+                    </div>
+
+                    <!-- Default Values -->
+                    <div>
+                        <input type="hidden" id="dotsOpacityDefault" value="0.8" />
+                        <input type="hidden" id="dotsColorDefault" value="#00AABB" />
+                        <input type="hidden" id="dotsRadiusDefault" value="17" />
+                        <input type="hidden" id="curveOpacityDefault" value="0.7" />
+                        <input type="hidden" id="curveColorDefault" value="#FF0088" />
+                        <input type="hidden" id="curveMaxWidthDefault" value="18" />
+                        <input type="hidden" id="curveMinWidthDefault" value="2" />
+                        <input type="hidden" id="curveAngleDefault" value="35" />
+                        <textarea style="display:none;" id="generatedCode">@ViewBag.GeneratedCode</textarea>
+                        <textarea style="display:none;" id="generatedSvgCode">@ViewBag.GeneratedSvgCode</textarea>
+                    </div>
+                </div>
+
+                <p id="manual">
+                    <b><span id="uploadDummy">Menu: Sheet -> Upload Dummy</span></b>
+                    <b>Double click</b><span id="dblClick"></span>
+                    <b>Ctrl + click</b><span id="deleteDot"></span>
+                    <b>Drag-and-drop</b><span id="dragDot"></span>
+                    <b><span id="menuTape">Menu: Tape > Max Width = 0</span></b>
+                       <span id="oneCurve">in order to get one Curve instead of Bunch of Curves.</span>
+                </p>
+            </div>
+
+
+
+            <div class="col-lg-4
+                        col-md-2
+                        col-sm-12
+                        col-xs-12">
+                <h2>
+                    <b>
+                        <span id="TitleSpan">
+                            Convert a dummy to:
+                        </span>
+                    </b>
+                </h2>
+                <span class="codeSpan"> - HTML </span><br />
+                <textarea id="htmlPlace" rows="4" cols="25"></textarea><br /><br />
+
+                <span class="codeSpan"> - <span id="orSpan">or</span> JSON, d3.js</span><br />
+                <textarea id="dataPlace" rows="4" cols="25"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="http://kosttkachenko.github.io/" class="button exampleRef">Usage Example</a>
+
+        <a href="http://geiko.github.io/" class="button aboutRef">About</a>
+        <!-- <a href="#" class="button donButton" rel="nofollow"><strong>DONATE</strong></a> -->
+    </footer>
 </body>
 </html>

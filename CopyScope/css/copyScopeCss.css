@@ -1,0 +1,216 @@
+body {
+    /*padding: 0 30px 10px 60px;*/
+    padding: 0 15px 10px 45px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.visitorQuantity{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#TitleSpan{
+    color: #00AABB;
+}
+
+.codeSpan{
+    color: #00AABB;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.svg-container {     
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 70%; 
+	vertical-align: middle; 
+	overflow: hidden; 
+
+    clear: left;
+    /*margin-top: 30px;*/
+    border:1px solid gray;
+
+    /*background-image: url('');*/
+    background-size: contain;
+    background-position:  center;
+    background-repeat: no-repeat;
+}
+
+.svg-content { 
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+    opacity: 0.8;
+
+    background-color: rgb(248, 248, 248);
+}
+
+.charK{
+    position: fixed;
+    top: 5px;
+    left: 2px;
+}
+
+/*----------------------------*/
+.manageMenu{
+    padding: 15px 0 2px 0;
+    /*border: 1px solid red;*/
+}
+
+.adjustPlate{
+    float: left;
+}
+
+.adjustDots{
+    float: left;
+    margin: 0 5px 0 5px;
+}
+
+.adjustLine{
+    float: left;
+}
+
+.adjustLine:hover:after{
+    content: " Bunch of Bezier Curves ";
+    width: 200px;
+    /*height: 30px;*/
+    color: #00AABB;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 130px;
+}   
+
+.lang{
+    float: right;
+}
+
+#language{
+    padding: 1px 0;
+}
+
+.clear{
+    clear: both;
+}
+/*----------------------------*/
+
+.menuStyle,
+.menuDotStyle,
+.menuCurveStyle{
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    width: auto;
+    height: auto;
+    background-color: white;
+    opacity: 1;
+    visibility: hidden;
+    padding: 15px;
+    border: 1px solid grey;
+}
+
+#getval{
+    /*visibility: hidden;*/
+    display: none;
+}
+
+.setCurveMinWidthDiv,
+.setCurvAngleDiv,
+.setSvgOpacityDiv,
+.setDotsOpacityDiv,
+.setCurveOpacityDiv{
+    margin: 5px 0;
+}
+
+#curveColorPickerButton,
+#dotsColorPickerButton,
+.setBackground,
+#colorPickerButton,
+#deleteImg,
+#language,
+#adjustPlateButton,
+#adjustDotsButton,
+#adjustLineButton {
+    background-color: #BBBBBB!important;
+    color: white!important;
+}
+
+#language {
+    background-color: #e0dfdf!important;
+}
+
+#curveColorPickerButton:hover,
+#dotsColorPickerButton:hover,
+.setBackground:hover,
+#colorPickerButton:hover,
+#deleteImg:hover,
+#language:hover,
+#adjustPlateButton:hover,
+#adjustDotsButton:hover,
+#adjustLineButton:hover{
+    background-color: #00AABB!important;
+    color: white!important;
+}
+
+body > footer{
+    position: fixed;
+    top: 0;
+    right: 100%;
+    padding: .5em 3em;
+    white-space: nowrap;
+    font-size: 120%;
+    color: rgba(0, 0, 0, .1);
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: top right;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin: top right;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: top right;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: top right;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+}
+
+.aboutRef, .exampleRef{
+    color: #dedcdc;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 20px;
+}
+
+.aboutRef:hover,
+.exampleRef:hover{
+    /*color: #FF0088;*/
+    color: #00AABB!important;
+}
+
+.donButton{
+    padding: .5em .6em;
+    color: white;
+    text-decoration: none!important;
+    font-size: 65%;
+    background: #BBBBBB;
+}
+
+.donButton:hover{
+    color: white;
+    /*background: #FF0088;*/
+    background-color: #00AABB!important;
+}
+
+#manual{
+    margin: 15px 0;
+}
