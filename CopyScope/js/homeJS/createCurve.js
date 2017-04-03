@@ -382,7 +382,17 @@ $(document).ready(function () {
                     svgCode = svgCode.substr(0, c1) + svgCode.substr(c2);
                 }
 
-                var genSvgCode = $('#generatedSvgCode').text();
+                // var genSvgCode = $('#generatedSvgCode').text();
+                var genSvgCode = `
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <title>The generated svg</title>
+</head>
+<body>                              
+    <div class="svg-container"></div>    
+</body>
+</html>`;
 
                 var index = genSvgCode.indexOf('<div class="svg-container">') + '<div class="svg-container">'.length;
                 genSvgCode = genSvgCode.slice(0, index) + svgCode + genSvgCode.slice(index);
@@ -392,6 +402,7 @@ $(document).ready(function () {
                 //-------------------------------------------------------------------------------------
 
                 var dataToShow = '\n\t\t\t\t\t[';
+
                 for (var i = 0; i < data.length; i++) {
                     if (i != 0) { dataToShow += '\t\t\t\t\t '; }
                     dataToShow += '{ "x": "'
@@ -400,7 +411,83 @@ $(document).ready(function () {
                     i == data.length - 1 ? dataToShow += '"}]' : dataToShow += '"},\n';
                 }
 
-                var codeToShow = $('#generatedCode').text();
+                // var codeToShow = $('#generatedCode').text();
+                var codeToShow = `
+<html>
+<head>
+  <meta charset="utf-8" /> 
+  <title>The generated JSON and d3.js</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="application/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body >
+    <div class="svg-content"></div>
+    <script>
+            
+        'use strict';
+        $(document).ready(function () {
+            (function () {
+
+                var data = ;
+
+                var feather = {
+                    width: ,
+                    thickness: ,
+                    angle: ,       // degree
+                    color: '',
+                    opacity: 
+                };
+
+                var Canvas = d3.select('.svg-content')
+                            .append('svg')
+                            .attr('height', 500)
+                            .attr('width', 500)
+                            .style('opacity', 1);
+
+                function createLines(KContainer, data) {
+
+                    var traceQuantity = Math.round(+feather.width / +feather.thickness) + 1;
+
+                    var xOffset = +feather.width * Math.cos(+feather.angle * Math.PI / 180);
+                    var yOffset = +feather.width * Math.sin(+feather.angle * Math.PI / -180);
+
+                    var trace = d3.svg.line()
+                          .x(function (d) { return d.x; })
+                          .y(function (d) { return d.y; })
+                          .interpolate("basis");
+
+                    for (var j = 0; j < traceQuantity; j++) {
+
+                        var tempData = [];
+
+                        for (var i = 0; i < data.length; i++) {
+                            tempData[i] = {
+                                x: +data[i].x + j * xOffset / traceQuantity,
+                                y: +data[i].y + j * yOffset / traceQuantity
+                            };
+                        };
+
+                        var traceGroup = KContainer
+                                  //.append('g')
+                                  .append('path')
+                                  .attr("d", trace(tempData))   // binding data to lines
+                                  .attr('fill', 'none')
+                                  .style("stroke", feather.color)
+                                  .style("stroke-linecap", "round")
+                                  .style('opacity', feather.opacity)
+                                  .style("stroke-width", +feather.thickness);
+                    }
+                };
+
+                createLines(Canvas, data);
+
+            })();
+        });
+
+    </script>    
+</body>
+</html>
+                `;
 
                 var index = codeToShow.indexOf('var data = ') + 'var data = '.length;
                 codeToShow = codeToShow.slice(0, index) + dataToShow + codeToShow.slice(index);
@@ -421,7 +508,6 @@ $(document).ready(function () {
                 codeToShow = codeToShow.slice(0, index) + feather.opacity + codeToShow.slice(index);
 
                 $('#dataPlace').text(codeToShow);
-
             }
         };
 
