@@ -7,15 +7,19 @@ $(document).ready(function () {
                          'Переведи макет в:',
                          'Переведи макет в:'],
             orArray: ['or', 'или', 'або'],
-            DummyArray: ['Menu: Sheet > Upload Dummy. ',
-                         'Меню: Лист > Загрузить макет. ',
-                         'Меню: Лист > Завантажити макет. '],
+            tipsArray: ['Tips:', 'Советы:', 'Поради:'],
+
+
+
+            DummyArray: ['Menu > Sheet > Upload Dummy. ',
+                         'Меню > Лист > Загрузить макет. ',
+                         'Меню > Лист > Завантажити макет. '],
             dblClickArray: [' - create new dot. ', ' - создать новую точку. ', ' - створити нову точку. '],
             deleteDotArray: [' - delete a dot. ', ' - удалить точку. ', ' - знищити точку. '],
             dragDotArray: [' a dot. ', ' точку. ', ' точку. '],
-            maxWidthArray: ['Menu: Tape > Max Width = 0',
-                            'Меню: Лист > Max Ширина = 0',
-                            'Меню: Лист > Max Ширина = 0'],
+            maxWidthArray: ['Menu > Tape > Max Width = 0',
+                            'Меню > Лист > Max Ширина = 0',
+                            'Меню > Лист > Max Ширина = 0'],
             maxWidthTextArray: [' in order to get one Curve instead of Bunch of Curves.',
                                 ' для получения одной линии вместо пучка линий.',
                                 ' для отримання однієї лінії замість пучка ліній.'],
@@ -37,6 +41,11 @@ $(document).ready(function () {
         var setLanguage = function () {
             $('#TitleSpan').text(local.titleArray[+$('#language').find(":selected").val()]);
             $('#orSpan').text(local.orArray[+$('#language').find(":selected").val()]);
+
+
+
+            $('#tips').text(local.tipsArray[+$('#language').find(":selected").val()]);
+
             $('#uploadDummy').text(local.DummyArray[+$('#language').find(":selected").val()]);
             $('#dblClick').text(local.dblClickArray[+$('#language').find(":selected").val()]);
             $('#deleteDot').text(local.deleteDotArray[+$('#language').find(":selected").val()]);
