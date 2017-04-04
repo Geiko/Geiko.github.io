@@ -115,7 +115,7 @@ textarea {
     width: auto;
     height: auto;
     background-color: white;
-    opacity: 1;
+    opacity: 0.8;
     visibility: hidden;
     padding: 15px;
     border: 1px solid grey;

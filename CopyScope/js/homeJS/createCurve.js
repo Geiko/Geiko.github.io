@@ -486,8 +486,7 @@ $(document).ready(function () {
 
     </script>    
 </body>
-</html>
-                `;
+</html>`;
 
                 var index = codeToShow.indexOf('var data = ') + 'var data = '.length;
                 codeToShow = codeToShow.slice(0, index) + dataToShow + codeToShow.slice(index);
