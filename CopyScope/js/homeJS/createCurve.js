@@ -383,8 +383,8 @@ $(document).ready(function () {
                 }
 
                 // var genSvgCode = $('#generatedSvgCode').text();
-                var genSvgCode = `
-<html>
+                var genSvgCode = 
+`<html>
 <head>
     <meta charset="utf-8" /> 
     <title>The generated svg</title>
@@ -412,8 +412,8 @@ $(document).ready(function () {
                 }
 
                 // var codeToShow = $('#generatedCode').text();
-                var codeToShow = `
-<html>
+                var codeToShow =
+`<html>
 <head>
   <meta charset="utf-8" /> 
   <title>The generated JSON and d3.js</title>
