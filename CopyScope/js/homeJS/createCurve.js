@@ -438,6 +438,8 @@ $(document).ready(function () {
                     opacity: 
                 };
 
+                var duration = 3000;
+
                 var Canvas = d3.select('.svg-content')
                             .append('svg')
                             .attr('height', 500)
@@ -468,7 +470,7 @@ $(document).ready(function () {
                         };
 
                         var traceGroup = KContainer
-                                  //.append('g')
+                                  .append('g')
                                   .append('path')
                                   .attr("d", trace(tempData))   // binding data to lines
                                   .attr('fill', 'none')
@@ -479,7 +481,46 @@ $(document).ready(function () {
                     }
                 };
 
+                
+                function animate(KContainer) {
+
+                    var totalLength = KContainer
+                                .select('g')
+                                .selectAll('path')
+                                .node()
+                                .getTotalLength();
+
+                    (function repeat() {
+
+                        KContainer
+                            .selectAll('path')
+                            .attr("stroke-dasharray", totalLength + " " + totalLength)
+                            .attr("stroke-dashoffset", totalLength)
+                            .transition()
+                                .duration(duration)
+                                .ease("linear")
+                                .attr("stroke-dashoffset", 0)
+                            .transition()
+                                .duration(1000)
+                                .style("stroke", "#FF0088")
+                            .transition()
+                                .duration(duration / 3)
+                                .style("stroke", "#00AABB")
+                            .transition()
+                                .duration(1000)
+                                .style("stroke", "yellow")
+                            .transition()
+                                .duration(1000)
+                            .transition()
+                                .duration(0)
+                                .style("stroke", "#FF0088")
+                                    .each("end", repeat);
+                    })();
+
+                };
+
                 createLines(Canvas, data);
+                animate(Canvas);
 
             })();
         });
