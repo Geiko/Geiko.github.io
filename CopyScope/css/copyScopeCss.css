@@ -17,7 +17,7 @@ textarea {
     right: 0;
 }
 
-#TitleSpan1, #TitleSpan2, #TitleSpan3{
+#TitleSpan1, #TitleSpan2, #TitleSpan3, #justDraw{
     color: #00AABB;
 }
 
@@ -216,3 +216,7 @@ body > footer{
 #manual{
     margin: 15px 0;
 }
+
+/*#backGround{
+    color: red;
+}*/
