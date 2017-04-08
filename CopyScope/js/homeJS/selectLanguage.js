@@ -3,17 +3,17 @@ $(document).ready(function () {
     (function () {
 
         var local = {
-            titleArray: ['Convert a dummy to:',
-                         'Переведи макет в:',
-                         'Переведи макет в:'],
-            orArray: ['or', 'или', 'або'],
+            titleArray: ['Convert a dummy to HTML:',
+                         'Переведи макет в HTML',
+                         'Переведи макет в HTML'],
+            // orArray: ['or', 'или', 'або'],
             tipsArray: ['Tips:', 'Советы:', 'Поради:'],
 
 
 
-            DummyArray: ['Menu > Sheet > Upload Dummy. ',
-                         'Меню > Лист > Загрузить макет. ',
-                         'Меню > Лист > Завантажити макет. '],
+            DummyArray: ['Menu > Sheet > Upload Dummy - to have dummy on working sheet background. ',
+                         'Меню > Лист > Загрузить макет - на заднем плане рабочего листа разместить макет.',
+                         'Меню > Лист > Завантажити макет - на задньому плані робочого листа розмістити макет.'],
             dblClickArray: [' - create new dot. ', ' - создать новую точку. ', ' - створити нову точку. '],
             deleteDotArray: [' - delete a dot. ', ' - удалить точку. ', ' - знищити точку. '],
             dragDotArray: [' a dot. ', ' точку. ', ' точку. '],
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
         var setLanguage = function () {
             $('#TitleSpan').text(local.titleArray[+$('#language').find(":selected").val()]);
-            $('#orSpan').text(local.orArray[+$('#language').find(":selected").val()]);
+            // $('#orSpan').text(local.orArray[+$('#language').find(":selected").val()]);
 
 
 
