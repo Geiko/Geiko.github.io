@@ -3,7 +3,7 @@ $(document).ready(function () {
     (function () {
 
         var local = {
-            titleArray: ['Convert a dummy to the SVG ',
+            titleArray: ['Convert a dummy to SVG ',
                          'Переведи макет в векторную графику ',
                          'Переведи макет в векторну графіку '],
             justDrawArray: ['(just draw and get HTML code)', 
