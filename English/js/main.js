@@ -27,7 +27,6 @@ $(document).ready(function(){
 			getQuestionOrder());
 	});
 	$('#_39_3').click(function(){
-		alert('asdf');
 		clickHelper(
 			_39_3, 
 			'Lesson 39.3.<br/><br/> (I) will ___ as soon as ___.', 
