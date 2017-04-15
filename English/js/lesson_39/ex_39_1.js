@@ -50,7 +50,7 @@ var _39_1 =
 	{	
 		task : `10. Phone, within three days`, 			
 		
-		solution : `According to company procedures, your phone should be connected with three days.`
+		solution : `According to company procedures, your phone should be connected within three days.`
 	},
 	{	
 		task : `11. Exam, sometime next week`, 			

@@ -11,11 +11,24 @@ $(document).ready(function(){
 		return $("input[name='questionOrderHidden']").val();
 	};
 
+
+
 	//---------------------------
 	$('#_39_1').click(function(){
-		clickHelper(_39_1, 'Lesson 39.1 According to ..., (he) should ... ', getQuestionOrder());
+		clickHelper(
+			_39_1, 
+			'Lesson 39.1 According to ___, (he) should ___ .', 
+			getQuestionOrder());
+	});
+	$('#_39_2').click(function(){
+		clickHelper(
+			_39_2, 
+			'Lesson 39.2.<br/><br/> When will ___ ?<br/> It should ___ .<br/> (At ten o\'clock?) <br/> Yes, according to ___ .', 
+			getQuestionOrder());
 	});
 	//---------------------------
+
+
 	
 	var clickHelper = function(dbName, topicName, questionOrder){
 		$('.toRemove').remove();
