@@ -26,6 +26,12 @@ $(document).ready(function(){
 			'Lesson 39.2.<br/><br/> When will ___ ?<br/> It should ___ .<br/> (At ten o\'clock?) <br/> Yes, according to ___ .', 
 			getQuestionOrder());
 	});
+	$('#_39_3').click(function(){
+		clickHelper(
+			_39_3, 
+			'Lesson 39.3.<br/><br/> (I) will ___ as soon as ___.', 
+			getQuestionOrder());
+	});
 	//---------------------------
 
 
