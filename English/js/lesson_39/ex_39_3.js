@@ -10,7 +10,7 @@ var _39_3 =
 you should get out of the Navy in four years.
 
 
-I will buy a house and settle down as soon as I get out of the Navy.`		
+I will buy a house and settle down as soon as I get out of the Navy.`
 	},
 	{	
 		task : `2. sign a new contract (Prices)`, 			
@@ -20,7 +20,7 @@ I will buy a house and settle down as soon as I get out of the Navy.`
 we should renegotiate the prices in three months.
 
 
-We will sign a new contract as soon as we renegotiate the prices.`	
+We will sign a new contract as soon as we renegotiate the prices.`
 	},
 	{	
 		task : `3. take some time away from work (Baby)`, 			
