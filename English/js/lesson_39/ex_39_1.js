@@ -13,7 +13,7 @@ var _39_1 =
 		solution : `According to the contract, we should renegotiate the prices in three months.`
 	},
 	{	
-		task : `3. Baby, a months`, 			
+		task : `3. Baby, a month`, 			
 		
 		solution : `According to your ultrasound results, you should have your baby in a month.`
 	},
@@ -60,6 +60,6 @@ var _39_1 =
 	{	
 		task : `12. Weather, in a few days`, 			
 		
-		solution : `According to the forecast, the wether should be clear and sunny in a few days.`
+		solution : `According to the forecast, the weather should be clear and sunny in a few days.`
 	}
 ];

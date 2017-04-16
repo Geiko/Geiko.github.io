@@ -32,6 +32,12 @@ $(document).ready(function(){
 			'Lesson 39.3.<br/><br/> (I) will ___ as soon as ___.', 
 			getQuestionOrder());
 	});
+	$('#_39_4').click(function(){
+		clickHelper(
+			_39_4, 
+			'Lesson 39.4.<br/><br/> Did (he) ___? I really don\'t remember. (He) might have ___.', 
+			getQuestionOrder());
+	});
 	//---------------------------
 
 
