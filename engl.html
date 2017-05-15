@@ -19,19 +19,30 @@
 		<hr class="toRemove">
 	</header>
 
-<!-- 	<div class="row toRemove questionOrder">
+	<div class="row toRemove questionOrder">
 		Questions are ordered &nbsp&nbsp
-		<input type="radio" name="questionOrder" value="byNumbers"> by numbers
+		<input type="radio" name="questionOrder" value="coherently"> coherently
 		<input type="radio" name="questionOrder" value="randomly" checked> randomly
 		<input type="hidden" name="questionOrderHidden">
-	</div> -->
+	</div>
 
 
 	<div class="row toRemove">
 	<!--==============================================-->
-    	<div class="col-md-4" >
+    	<div class="col-md-6" >
     		<div class="field">
 	    		<h3>CS</h3>
+				<ul>
+					<li>Grammar
+						<ul>
+							<li><a type="button" id="gram_do_make"> Do - make. </a></li>
+							<li><a type="button" id="gram_infin_gerun"> Infinitive - gerundy. </a></li>
+							<li><a type="button" id="gram_good_well"> Good - well. </a></li>
+							<li><a type="button" id="gram_on_in_at"> On - in - at. </a></li>
+							<li><a type="button" id="gram_above_below"> Above - below - beneath - on top (of) - over - under/underneath. </a></li>
+						</ul>
+					</li>	
+				</ul>
 				<ul>
 					<li>Lesson 39
 						<ul>
@@ -39,6 +50,14 @@
 							<li><a type="button" id="_39_2"> 39.2. When will ___? </a></li>
 							<li><a type="button" id="_39_3"> 39.3. As soon as. </a></li>
 							<li><a type="button" id="_39_4"> 39.4. Might have. </a></li>
+						</ul>
+					</li>	
+				</ul>
+				<ul>
+					<li>Lesson 41
+						<ul>
+							<li><a type="button" id="_41_1"> 41.1. Don't (climb to ...). You might (get stuck). </a></li>
+							<li><a type="button" id="_41_2"> 41.2. I just don't know what to think about ... </a></li>
 						</ul>
 					</li>	
 				</ul>
@@ -59,10 +78,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+	<script src="English/js/grammar/gram_do_make.js"></script>
+
 	<script src="English/js/lesson_39/ex_39_1.js"></script>
 	<script src="English/js/lesson_39/ex_39_2.js"></script>
 	<script src="English/js/lesson_39/ex_39_3.js"></script>
 	<script src="English/js/lesson_39/ex_39_4.js"></script>
+
+	<script src="English/js/lesson_41/ex_41_1.js"></script>
+	<script src="English/js/lesson_41/ex_41_2.js"></script>
 
 	<script src='English/js/main.js'></script>	
 </body>
