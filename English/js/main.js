@@ -10,14 +10,29 @@ $(document).ready(function(){
 	var getQuestionOrder = function(){
 		return $("input[name='questionOrderHidden']").val();
 	};
-
-
-
 	//---------------------------
 	$('#gram_do_make').click(function(){
 		clickHelper(
 			gram_do_make, 
 			'Do - make.', 
+			getQuestionOrder());
+	});
+	$('#gram_have_take').click(function(){
+		clickHelper(
+			gram_have_take, 
+			'Have - take.', 
+			getQuestionOrder());
+	});
+	$('#gram_inf_gerun').click(function(){
+		clickHelper(
+			gram_inf_gerund, 
+			'Infinitive - Gerund.', 
+			getQuestionOrder());
+	});
+	$('#gram_phrasal_verbs').click(function(){
+		clickHelper(
+			gram_phrasal_verbs, 
+			'Phrasal verbs.', 
 			getQuestionOrder());
 	});
 
