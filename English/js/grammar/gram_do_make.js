@@ -76,10 +76,10 @@ make one’s bed – в значении „убрать постель”`
 		task : `делать работу`, 	solution : `do work`    
 	},
 	{	
-		task : `иметь полезный эффект`, 	solution : `do wonders (for)`    
+		task : `иметь полезный эффект в`, 	solution : `do wonders for`    
 	},
 	{	
-		task : `обходиться без`, 	solution : `do without (something)`    
+		task : `обходиться без чего-то`, 	solution : `do without something`    
 	},
 	{	
 		task : `застегнуть`, 	solution : `do up`    
@@ -106,7 +106,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `поступать хорошо / плохо`, 	solution : `do right / wrong`    
 	},
 	{	
-		task : `провести исследование (о)`, 	solution : `do research (on)`    
+		task : `провести исследование о`, 	solution : `do research on`    
 	},
 	{	
 		task : `чинить`, 	solution : `do repairs`    
@@ -121,16 +121,16 @@ make one’s bed – в значении „убрать постель”`
 		task : `выполнять свой долг`, 	solution : `do one's duty / part`    
 	},
 	{	
-		task : `переделать (что-то)`, 	solution : `do (something) over`    
+		task : `переделать что-то`, 	solution : `do something over`    
 	},
 	{	
 		task : `обедать`, 	solution : `do lunch`    
 	},
 	{	
-		task : `Воздать должное за что-то / показывать себя с лучшей стороны`, 	solution : `do justice to (something)`    
+		task : `Воздать должное за что-то / показывать себя с лучшей стороны`, 	solution : `do justice to something`    
 	},
 	{	
-		task : `быть достаточным, подходть`, 	solution : `do it`    
+		task : `быть достаточным, подходить`, 	solution : `do it`    
 	},
 	{	
 		task : `убить, плохо влиять`, 	solution : `do in`    
@@ -139,28 +139,28 @@ make one’s bed – в значении „убрать постель”`
 		task : `выполнять поручения`, 	solution : `do errands`    
 	},
 	{	
-		task : `нанести ущерб`, 	solution : `do damage (to)`    
+		task : `нанести ущерб`, 	solution : `do damage to`    
 	},
 	{	
-		task : `(не) преуспевать (в)`, 	solution : `do badly / well (in)`    
+		task : `(не) преуспевать в`, 	solution : `do badly / well in`    
 	},
 	{	
-		task : `избавиться`, 	solution : `do away with (somthing)`    
+		task : `избавиться от чего-то`, 	solution : `do away with somthing`    
 	},
 	{	
-		task : `провести операцию на`, 	solution : `do an operation (on)`    
+		task : `провести операцию на`, 	solution : `do an operation on`    
 	},
 	{	
-		task : `подражать (кому-л.)`, 	solution : `do an imitation (of)`    
+		task : `подражать кому-л.`, 	solution : `do an imitation of`    
 	},
 	{	
-		task : `ставить эксперимент (с)`, 	solution : `do an experiment (with)`    
+		task : `ставить эксперимент с`, 	solution : `do an experiment with`    
 	},
 	{	
 		task : `делать упражнение`, 	solution : `do an exercise`    
 	},
 	{	
-		task : `решить проблему (с)`, 	solution : `do about ( smht./smb.)`    
+		task : `решить проблему с`, 	solution : `do about smht./smb.`    
 	},
 	{	
 		task : `выполнить задание`, 	solution : `do a task`    
@@ -169,7 +169,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `давать проповедь`, 	solution : `do a service / sermon`    
 	},
 	{	
-		task : `разыгрывать сцену`, 	solution : `do a scene (from)`    
+		task : `разыгрывать сцену из`, 	solution : `do a scene from`    
 	},
 	{	
 		task : `решить задачу (математическую)`, 	solution : `do a problem`    
@@ -202,13 +202,13 @@ make one’s bed – в значении „убрать постель”`
 		task : `делать покупки`, 	solution : `do the shopping`
 	},
 	{	
-		task : `гладить `, 	solution : `do the ironing (действие)`
+		task : `гладить `, 	solution : `do the ironing`
 	},
 	{	
-		task : `стирать `, 	solution : `do the laundry (действие) `
+		task : `стирать `, 	solution : `do the laundry`
 	},
 	{	
-		task : `мыть посуду (действие)`, solution : `do the washing up (действие)`
+		task : `мыть посуду (действие)`, solution : `do the washing up `
 	},
 	{	
 		task : `делать домашнюю работу`, solution : `do homework `
@@ -223,7 +223,7 @@ make one’s bed – в значении „убрать постель”`
 		task : ` плохо преуспевать (в чем-либо); плохо удаваться (о чем-либо); и т.д.`, solution : `do badly`
 	},
 	{	
-		task : `иметь дело (с)`, solution : `do business (with)`
+		task : `иметь дело с`, solution : `do business with`
 	},
 	{	
 		task : ` мыть посуду`, solution : `do the dishes`
@@ -247,14 +247,14 @@ make one’s bed – в значении „убрать постель”`
 		task : ` сделать все возможное`, solution : `do your best (to / on)`
 	},
 	{	
-		task : ` причесывать волосы`, solution : `do (one's) hair`
+		task : ` причесывать чьи-то волосы`, solution : `do one's hair`
 	},
 	{	
 		task : ` вносить поправки (в договор, в контракт, и т.п.); также может означать "компенсировать кому-либо что-либо", "извиниться перед кем-либо"`, 			
 		solution : `make amends`
 	},
 	{	
-		task : ` договориться, устроить что-либо, сделать приготовления (для)`, solution : `make arrangements (for / to)`
+		task : ` договориться, устроить что-либо, сделать приготовления для`, solution : `make arrangements for / to`
 	},
 	{	
 		task : ` притворяться, делать вид`, solution : `make believe (to pretend)`
@@ -266,7 +266,7 @@ make one’s bed – в значении „убрать постель”`
 		task : ` сделать замечание, комментарий`, solution : `make a comment`
 	},
 	{	
-		task : ` принять решение (o)`, solution : `make a decision (about)`
+		task : ` принять решение o`, solution : `make a decision about`
 	},
 	{	
 		task : ` иметь разницу/значение (например:  – Это не имеет никакой разницы).`, solution : `make a difference (to)– It makes no difference.`
@@ -278,7 +278,7 @@ make one’s bed – в значении „убрать постель”`
 		task : ` сделать запрос, наводить справки`, solution : `make an enquiry`
 	},
 	{	
-		task : ` извиниться, сказать оправдание, отговорку`, solution : `make an excuse (for)`
+		task : ` извиниться, сказать оправдание, отговорку`, solution : `make an excuse for`
 	},
 	{	
 		task : ` выставить себя дураком`, solution : `make a fool of yourself`
@@ -287,10 +287,10 @@ make one’s bed – в значении „убрать постель”`
 		task : ` сделать состояние`, solution : `make a fortune`
 	},
 	{	
-		task : ` подружиться`, solution : `make friends (with)`
+		task : ` подружиться с`, solution : `make friends with`
 	},
 	{	
-		task : ` поднимать шум, суету (о)`, solution : `make a fuss (about)`
+		task : ` поднимать шум, суету о`, solution : `make a fuss about`
 	},
 	{	
 		task : ` совершить путешествие`, solution : `make a journey`
@@ -299,7 +299,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `напутать, устроить беспорядок`, solution : `make a mess`
 	},
 	{	
-		task : ` сделать ошибку (в)`, solution : `make a mistake (in)`
+		task : ` сделать ошибку в`, solution : `make a mistake in`
 	},
 	{	
 		task : ` зарабатывать деньги`, solution : `make money`
@@ -311,7 +311,7 @@ make one’s bed – в значении „убрать постель”`
 		task : ` шуметь`, solution : `make a noise`
 	},
 	{	
-		task : ` совершить телефонный звонок`, 	solution : `make a call (to)`
+		task : ` совершить телефонный звонок`, 	solution : `make a call to`
 	},
 	{	
 		task : ` составить план`, solution : `make a plan`
@@ -320,10 +320,10 @@ make one’s bed – в значении „убрать постель”`
 		task : ` выразить точку зрения`, solution : `make a point`
 	},
 	{	
-		task : ` получать прибыль`, solution : `make a profit (on)`
+		task : ` получать прибыль`, solution : `make a profit on`
 	},
 	{	
-		task : ` сделать обещание`, solution : `make a promise (to)`
+		task : ` сделать обещание`, solution : `make a promise to`
 	},
 	{	
 		task : ` сделать замечание`, solution : `make a remark`
@@ -335,7 +335,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `выступить с речью`, solution : `make a speech`
 	},
 	{	
-		task : ` сделать предложение`, solution : `make a suggestion (about)`
+		task : ` сделать предложение о`, solution : `make a suggestion about`
 	},
 	{	
 		task : `приготовить пищу`, solution : `make a meal`
@@ -371,7 +371,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `знакомиться`, solution : `make an acquaintance of `
 	},
 	{	
-		task : `договориться о встрече (с)`, solution : `make an appointment (with)`
+		task : `договориться о встрече с`, solution : `make an appointment with`
 	},
 	{	
 		task : `пытаться`, solution : `make an attempt`
@@ -386,7 +386,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `совершать сделку`, solution : `make a deal`
 	},
 	{	
-		task : `произвести впечатление (на)`, solution : `make an impression (on)`
+		task : `произвести впечатление на`, solution : `make an impression on`
 	},
 	{	
 		task : `составить список`, solution : `make a list`
@@ -398,13 +398,13 @@ make one’s bed – в значении „убрать постель”`
 		task : `предложить`, solution : `make an offer`
 	},
 	{	
-		task : `сделать запрос`, solution : `make a request (for)`
+		task : `сделать запрос о`, solution : `make a request for`
 	},
 	{	
-		task : `забронировать`, solution : `make a reservation (for)`
+		task : `забронировать`, solution : `make a reservation for`
 	},
 	{	
-		task : `пообещать самому себе`, solution : `make a resolution (to)`
+		task : `пообещать кому-л.`, solution : `make a resolution to`
 	},
 	{	
 		task : `плохо влияют на людей`, solution : `make a scene`
@@ -413,10 +413,10 @@ make one’s bed – в значении „убрать постель”`
 		task : `сделать тост`, solution : `make a toast`
 	},
 	{	
-		task : ``, solution : `make do (with / without smth.)`
+		task : ``, solution : `make do (with / without smth.)`//////////////////////////////////////////
 	},
 	{	
-		task : `насмехаться`, solution : `make fun (of)`
+		task : `насмехаться над`, solution : `make fun of`
 	},
 	{	
 		task : `успевать, выживать`, solution : `make it`
@@ -437,7 +437,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `делать приготовления`, solution : `make preparations`
 	},
 	{	
-		task : `делать прогресс в`, solution : `make progress (in)`
+		task : `делать прогресс в`, solution : `make progress in`
 	},
 	{	
 		task : `быть понятным , разумным`, solution : `make sense`
@@ -449,7 +449,7 @@ make one’s bed – в значении „убрать постель”`
 		task : `застелить постель`, solution : `make the bed`
 	},
 	{	
-		task : `уделять время`, solution : `make time (for)`
+		task : `уделять время`, solution : `make time for`
 	},
 	{	
 		task : `причинять неприятности`, solution : `make trouble`
