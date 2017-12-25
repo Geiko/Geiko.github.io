@@ -270,11 +270,11 @@ Full-Width Styles
 .mybody, .myfooter{
   position: relative; 
   z-index: 1;
-  top: 200px;*/
+  top: 200px;
 }
-.pulseDown{
+/* .pulseDown{
   margin-top:60px;
-}
+} */
 
 
 .outer {
@@ -319,7 +319,7 @@ Full-Width Styles
 #project_title {
   margin: 0;
   color: #33FF00;
-  font-size: 36px;*/
+  font-size: 36px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
@@ -396,16 +396,17 @@ Full-Width Styles
       stroke: orange;
     }
     
-    #pulse:hover:before{
-       content: " Hello! ";
+    /* #pulse:hover:before{
+       content: " Download ";
        width: 120px;
        height: 30px;
        color: #F8A000;
        font-style: italic;
        font-weight: normal;
-        text-align: center;
-        position: absolute;
-    }
+       text-align: center;
+       position: absolute;
+       top: 0px;
+    } */
 /*
     .charK:hover:before{
        content: " E-mail ";
@@ -553,3 +554,11 @@ Small Device Styles
   }
 
 }
+
+.download-cv{
+  color: orange;
+  position: absolute;
+  top: 15px;
+  left: 35px;
+}
+    

@@ -32,15 +32,15 @@ var margin = {
       var ellipse = svg.select("ellipse");
       (function repeat() {
         ellipse = ellipse.transition()
-          .duration(12)
+          .duration(2000)
           .attr("stroke-width", 2)
           .attr("rx", 0)
           .attr("ry", 0)
           .transition()
-          .duration(700)
+          .duration(200)
           .attr('stroke-width', 0)
-          .attr("rx", 25)
-          .attr("ry", 25)
+          .attr("rx", 30)
+          .attr("ry", 30)
           .ease('sine')
           .each("end", repeat);
       })();
