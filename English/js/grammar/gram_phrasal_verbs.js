@@ -9,9 +9,9 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `break out`, solution : `start suddenly`   
+		task : `break out`, solution : `start suddenly`, rating : 3     
 	},{	
-		task : `start suddenly`, 	solution : `break out`    
+		task : `start suddenly`, 	solution : `break out`, rating : 3     
 	},   
 
 	{	
@@ -21,9 +21,9 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `break up`, solution : `stop relationships`   
+		task : `break up`, solution : `stop relationships`, rating : 5     
 	},{	
-		task : `stop relationships`, 	solution : `break up`    
+		task : `stop relationships`, 	solution : `break up`, rating : 5      
 	},   
 //------------------------------------------------------------------------------
 	{	
@@ -33,21 +33,21 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `come round`, solution : `visit`   
+		task : `come round`, solution : `visit`, rating : 5     
 	},{	
-		task : `visit`, 	solution : `come round`    
+		task : `visit`, 	solution : `come round`, rating : 5      
 	},   
 
 	{	
-		task : `come across`, solution : `find suddenly`   
+		task : `come across`, solution : `find suddenly`, rating : 5     
 	},{	
-		task : `find suddenly`, 	solution : `come across`    
+		task : `find suddenly`, 	solution : `come across`, rating : 5      
 	},   
 
 	{	
-		task : `come into`, solution : `inherit`   
+		task : `come into`, solution : `inherit`, rating : 5     
 	},{	
-		task : `inherit`, 	solution : `come into`    
+		task : `inherit`, 	solution : `come into`, rating : 5      
 	},   
 //------------------------------------------------------------------------------
 	{	
@@ -63,9 +63,9 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `look after`, solution : `take care`   
+		task : `look after`, solution : `take care`, rating : 3    
 	},{	
-		task : `take care`, 	solution : `look after`    
+		task : `take care`, 	solution : `look after`, rating : 3      
 	},   
 
 	{	
@@ -81,21 +81,21 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `put up`, solution : `give a bed`   
+		task : `put up`, solution : `give a bed`, rating : 3    
 	},{	
-		task : `give a bed`, 	solution : `put up`    
+		task : `give a bed`, 	solution : `put up`, rating : 3     
 	},   
 
 	{	
-		task : `put off`, solution : `postpone`   
+		task : `put off`, solution : `postpone`, rating : 5     
 	},{	
-		task : `postpone`, 	solution : `put off`    
+		task : `postpone`, 	solution : `put off`, rating : 5      
 	},   
 
 	{	
-		task : `put out`, solution : `stop (fire)`   
+		task : `put out`, solution : `stop (fire)`, rating : 3    
 	},{	
-		task : `stop (fire)`, 	solution : `put out`    
+		task : `stop (fire)`, 	solution : `put out`, rating : 3      
 	},   
 //------------------------------------------------------------------------------
 	{	
@@ -111,51 +111,51 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `run into`, solution : `meet suddenly`   
+		task : `run into`, solution : `meet suddenly`, rating : 5     
 	},{	
-		task : `meet suddenly`, 	solution : `run into`    
+		task : `meet suddenly`, 	solution : `run into`, rating : 5      
 	},   
 
 	{	
-		task : `run out of`, solution : `ended`   
+		task : `run out of`, solution : `ended`, rating : 5     
 	},{	
-		task : `ended`, 	solution : `run out of`    
+		task : `ended`, 	solution : `run out of`, rating : 5      
 	},   
 //------------------------------------------------------------------------------
 	{	
-		task : `take after`, solution : `look like`   
+		task : `take after`, solution : `look like`, rating : 5     
 	},{	
-		task : `look like`, 	solution : `take after`    
+		task : `look like`, 	solution : `take after`, rating : 5      
 	},   
 
 	{	
-		task : `take over`, solution : `control`   
+		task : `take over`, solution : `control`, rating : 5     
 	},{	
-		task : `control`, 	solution : `take over`    
+		task : `control`, 	solution : `take over`, rating : 5      
 	},   
 
 	{	
-		task : `take up`, solution : `start hobby`   
+		task : `take up`, solution : `start hobby`, rating : 5     
 	},{	
-		task : `start hobby`, 	solution : `take up`    
+		task : `start hobby`, 	solution : `take up`, rating : 5      
 	},   
 
 	{	
-		task : `take off`, solution : `unstick (взлететь)`   
+		task : `take off`, solution : `unstick (взлететь)`, rating : 5     
 	},{	
-		task : `unstick (взлететь)`, 	solution : `take off`    
+		task : `unstick (взлететь)`, 	solution : `take off`, rating : 5      
 	},   
 //------------------------------------------------------------------------------
 	{	
-		task : `turn into`, solution : `transform`   
+		task : `turn into`, solution : `transform`, rating : 3    
 	},{	
-		task : `transform`, 	solution : `turn into`    
+		task : `transform`, 	solution : `turn into`, rating : 3      
 	},   
 
 	{	
-		task : `turn down`, solution : `refuse, make sound quiet`   
+		task : `turn down`, solution : `refuse, make sound quiet`, rating : 5     
 	},{	
-		task : `refuse`, 	solution : `turn down`    
+		task : `refuse`, 	solution : `turn down`, rating : 5      
 	},{	
 		task : `make sound quiet`, 	solution : `turn down`    
 	},   
@@ -167,8 +167,8 @@ var gram_phrasal_verbs =
 	},   
 
 	{	
-		task : `turn up`, solution : `appear`   
+		task : `turn up`, solution : `appear`, rating : 5     
 	},{	
-		task : `appear`, 	solution : `turn up`    
+		task : `appear`, 	solution : `turn up`, rating : 5      
 	}
 ]

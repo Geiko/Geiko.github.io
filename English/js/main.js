@@ -77,6 +77,13 @@ $(document).ready(function(){
 			`Of course (he) shouldn't have. (He) could have (gotten ...).`, 
 			getQuestionOrder());
 	});
+	
+	$('#dictionary').click(function(){
+		clickHelper(
+			_dictionary, 
+			'Friquent dictionary', 
+			getQuestionOrder());
+	});
 	//---------------------------
 
 
@@ -120,8 +127,8 @@ $(document).ready(function(){
 			var task_number_counter = 0;
 			$('.nextTask').click({n: task_number_counter, t: tasks, qo: questionOrder}, setNextTask);
 
-			$(document). keypress(function(eventObject){
-				if (eventObject.which === 46){
+			$(document). keyup(function(eventObject){
+				if (eventObject.which === 190){
 				  	$('.nextTask').click();
 				}
 			});
@@ -133,6 +140,7 @@ $(document).ready(function(){
 			var setNextTask = function(event){
 
 				var tasks = event.data.t;
+				tasks = sortByRating(tasks);
 				var questionOrder = event.data.qo;
 
 				var task_number;
@@ -143,30 +151,23 @@ $(document).ready(function(){
 					task_number = Math.floor((Math.random() * (tasks.length - 1)) + 0);;
 				}
 
-				$('.showSolution').text('Solution');
+				$('.showSolution').text('Solution');				
 				$('#challenge').val('');
-
-								//-----------------------------------
-								// change to show solution
-								// $('#solution').html(tasks[task_number].solution)
-								//			  .removeClass('hidden')
-								// 			  .addClass('show');
-								$('#solution').removeClass('show')
-								 			   .addClass('hidden');		
-								//-----------------------------------		
-
+				$('#solution').removeClass('show')
+							  .addClass('hidden');	
 				$('#question').html(tasks[task_number].task);		
-
-				//--------------
 
 				var flag = false;
 				$('.showSolution').click({n: task_number, t: tasks, f: flag}, showSolution);
 
-				$(document).keypress(function(eventObject){
-					if (eventObject.which === 39){
-					  	$('.showSolution').click();
-					}
-				});		
+				$(document).on("keyup", function(eventObject) {					
+					if (eventObject.which === 222){						
+				 	  	$('.showSolution').click();
+						var temp = $('#challenge').val();
+						temp = temp.replace('\'','');
+						$('#challenge').val(temp);
+					}		
+				  });		
 			};
 
 			var showSolution = function(event){		
@@ -189,5 +190,20 @@ $(document).ready(function(){
 				}
 				
 				(flag) ? flag = false : flag = true;
+			}
+
+			var sortByRating = function(tasks){
+				
+				var tempTasks = [];
+				for(var i = 5; i >= 0; i--){
+					for(var j = 0; j < tasks.length; j++){
+						if(tasks[j].rating === undefined)
+							tasks[j].rating = 1;
+						if(tasks[j].rating === i)
+							tempTasks.push(tasks[j]);
+					}
+				}
+				
+				return tempTasks;
 			}
 });

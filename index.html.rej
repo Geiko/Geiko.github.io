@@ -1,0 +1,10 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -117,7 +117,7 @@
+             <div  class="animate5">
+                 <h5 class="animate6">EXPERIENCE</h5><br/>      
+ 				
+-                <h6 style="color: orange;">My life My Adventure</h6>
++                <h6 style="color: orange;">My Life My Adventure</h6>
+                 <!-- <h6>CREATING A WEB-TOOL TO ANIMATE CALLIGRAPHY LETTER</h6> -->
+                 <p>
+ 					April 2017 – June 2017 <br/>
